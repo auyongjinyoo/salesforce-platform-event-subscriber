@@ -1,0 +1,25 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: demo
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            loggerLevel: full
+          sfAuth:
+            url: your_salesforce_instance_url
+salesforce:
+  pubsub:
+    endpoint: api.pubsub.salesforce.com:443
+    batchSize: 3
+    event:
+      eventName: your_salesforce_event_name
+  security:
+    grantType: password
+    clientID: your_client_id
+    clientSecret: your_client_secret
+    userName: your_username
+    password: your_password
